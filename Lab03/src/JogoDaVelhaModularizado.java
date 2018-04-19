@@ -4,7 +4,7 @@ import java.lang.ArrayIndexOutOfBoundsException;
 /*
 Aluno 1: Felipe da Silva Gouveia
 Aluno 2: Jardesson Ellíudo Lázaro da Costa  
-Aluno 3: Matheus
+Aluno 3: Matheus de Moura Torres
 */
 
 public class JogoDaVelhaModularizado{
