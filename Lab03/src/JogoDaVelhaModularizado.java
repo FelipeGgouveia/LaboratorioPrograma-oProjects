@@ -10,8 +10,6 @@ Aluno 3: Matheus
 public class JogoDaVelhaModularizado{
     
     private static final char TABULEIRO[][]=new char[3][3];
-    //private static final char O = 'O';
-    //private static final char X = 'X';
     private static final char OX[] = {'O','X'};
     private static final char VAZIO = ' ';
     
