@@ -12,7 +12,6 @@ public class JogoDaVelhaModularizado{
     private static final char TABULEIRO[][]=new char[3][3];
     private static final char OX[] = {'O','X'};
     private static final char VAZIO = ' ';
-    
     private static int jogada = 0,jogador, j, i, win;
     private static Scanner sc = new Scanner(System.in);
     
@@ -29,8 +28,7 @@ public class JogoDaVelhaModularizado{
 
     public static void ler_jogada(){
        
-        try{
-        	win=0;
+        try{       	
             mostrar_tabuleiro();
             System.out.println("\nINSIRA AS COORDENADAS\n");
             jogador = jogada%2;
@@ -48,10 +46,8 @@ public class JogoDaVelhaModularizado{
             	System.out.println("COORDENADA INVÁLIDA!");
             
         }catch(ArrayIndexOutOfBoundsException e){
-            System.out.println("COORDENADA INVÁLIDA!");
-            
-        }
-                
+            System.out.println("COORDENADA INVÁLIDA!");            
+        }                
     }
 
     public static void mostrar_tabuleiro(){
@@ -93,6 +89,7 @@ public class JogoDaVelhaModularizado{
         		}
             }
             if(win==1) {
+            	win=0;
             	break;
             }
         }
@@ -114,7 +111,5 @@ public class JogoDaVelhaModularizado{
         if(novojogo == COMECAR)
         	limpar_tabuleiro();
             verificar_vencedor();
-      
-    }
-    
+    }    
 }
