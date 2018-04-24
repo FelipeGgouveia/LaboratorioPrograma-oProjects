@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class JogoDaVelhaModularizado {
     static Scanner sc = new Scanner(System.in);
-    static final char OPCAO[] = {'O', 'X'};
+    static final char OPCAO[] = {'O','X'};
     static char tabuleiro[][] = new char[3][3];
     static int jogada = 0, i, j;
     
