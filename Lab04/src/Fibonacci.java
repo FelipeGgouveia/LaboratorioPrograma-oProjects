@@ -4,7 +4,7 @@
 *Aluno 2: Jardesson Elliudo Lazaro da Costa
 *Aluno 3: Matheus de Moura Torres */
 
-/**Classe que gera a sequencia de numeros de Fibonacci.*/
+/**Classe que gera uma sequencia de Fibonacci.*/
 
 public class Fibonacci {
     private final double binet = 1.618034;
