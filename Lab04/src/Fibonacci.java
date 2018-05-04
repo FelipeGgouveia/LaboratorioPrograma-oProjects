@@ -1,5 +1,4 @@
-/**
-@author
+/**@author
 *Aluno 1: Felipe da Silva Gouveia 
 *Aluno 2: Jardesson Elliudo Lazaro da Costa
 *Aluno 3: Matheus de Moura Torres */
@@ -54,9 +53,9 @@ public class Fibonacci {
     @param variosTermos a quantidade de termos da sequencia
      */
     public void geraTermos(int variosTermos) {
-        System.out.print(primeiro()+", ");
+        System.out.print("["+primeiro()+", ");
         for(int i=1;i<variosTermos;i++){
-            if(i == variosTermos-1)System.out.println(proximo()+".");
+            if(i == variosTermos-1)System.out.println(proximo()+"]");
             else System.out.print(proximo()+", ");
         }
     }
