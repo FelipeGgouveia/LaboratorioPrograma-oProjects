@@ -20,12 +20,20 @@ public class ExplorandoOMundoDasSeries {
 	
 	//mostra 5 primeiros termos da PA, gerando todos de uma vez
 	System.out.println("5 primeiros termos da PA: todos de uma vez...");
-	System.out.println(pa.geraTermos(5));
+	pa.geraTermos(5);
 	System.out.println("Proximo: " + pa.proximo());
 	
 	//reinicia a PA
 	System.out.println("Primeiro: " + pa.primeiro());
 	System.out.println("Proximo: " + pa.proximo());
+        
+        Fibonacci fi = new Fibonacci();
+        System.out.println(fi.primeiro());
+        System.out.println(fi.proximo());
+        System.out.println(fi.proximo());
+        System.out.println(fi.proximo());
+        System.out.println(fi.termo(10));
+        fi.geraTermos(10);
     }
 
 }
