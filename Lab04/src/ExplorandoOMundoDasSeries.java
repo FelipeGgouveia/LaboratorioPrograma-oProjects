@@ -6,7 +6,8 @@ public class ExplorandoOMundoDasSeries {
     
     public static void main(String[] args) {
 	ProgressaoAritmetica pa = new ProgressaoAritmetica(2, 4);
-	
+	Fibonacci fi = new Fibonacci();
+        
 	//mostra 5 primeiros termos da PA, gerando um por vez
 	System.out.println("5 primeiros termos da PA: um por vez...");
 	System.out.println("Primeiro: " + pa.primeiro());
@@ -26,8 +27,7 @@ public class ExplorandoOMundoDasSeries {
 	//reinicia a PA
 	System.out.println("Primeiro: " + pa.primeiro());
 	System.out.println("Proximo: " + pa.proximo());
-        
-        Fibonacci fi = new Fibonacci();
+               
         System.out.println(fi.primeiro());
         System.out.println(fi.proximo());
         System.out.println(fi.proximo());

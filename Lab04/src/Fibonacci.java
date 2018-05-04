@@ -41,7 +41,7 @@ public class Fibonacci {
     /**
     Calcula qualquer termo da serie de Fibonacci..
     @param posicaoTermos posicao do termo pedido
-    @return o termo qualquer pedido
+    @return o termo pedido
      */
     public int termo(int posicaoTermos) {
         this.posicaoTermos = posicaoTermos;

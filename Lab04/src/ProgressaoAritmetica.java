@@ -37,7 +37,7 @@ public class ProgressaoAritmetica {
     /**
     Calcula qualquer termo da serie de Fibonacci..
     @param termo posicao do termo pedido
-    @return o termo qualquer pedido
+    @return o termo pedido
      */
     public int termo(int termo) {
         this.termo = termo;
