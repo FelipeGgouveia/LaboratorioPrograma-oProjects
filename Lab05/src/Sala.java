@@ -13,9 +13,7 @@ public class Sala {
     }
     
     public Sala(int NUM_LINHAS, int NUM_COLUNAS) throws Exception{
-        if((NUM_LINHAS<=0)&&(NUM_COLUNAS<=0)) throw new Exception("Parametros incorretos para a criacao da sala. As dimensoes da sala devem ser representadas por valores positivos maiores que zero");
-        if(NUM_LINHAS<=0) throw new Exception("Parametros incorretos para a criacao da sala. As dimensoes da sala devem ser representadas por valores positivos maiores que zero");
-        if(NUM_COLUNAS<=0) throw new Exception("Parametros incorretos para a criacao da sala. As dimensoes da sala devem ser representadas por valores positivos maiores que zero");
+        if(((NUM_LINHAS<=0)&&(NUM_COLUNAS<=0))||NUM_LINHAS<=0||NUM_COLUNAS<=0) throw new Exception("Parametros incorretos para a criacao da sala. As dimensoes da sala devem ser representadas por valores positivos maiores que zero");       
         
         this.sala = new int[NUM_LINHAS][NUM_COLUNAS];
         zerarSala();
