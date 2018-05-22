@@ -94,8 +94,8 @@ public class TestaSala {
 	} catch (Exception e) {
             e.printStackTrace();
 	}
-            Assert.assertTrue(sala.getNumPosicoesHorizontais() == 8);
-            Assert.assertTrue(sala.getNumPosicoesVerticais() == 9);
+        Assert.assertTrue(sala.getNumPosicoesHorizontais() == 8);
+        Assert.assertTrue(sala.getNumPosicoesVerticais() == 9);
     }
 
     @Test
