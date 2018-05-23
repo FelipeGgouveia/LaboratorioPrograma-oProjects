@@ -39,7 +39,22 @@ public class Sala {
     }
 
     public boolean inserirObstaculo(int POSICAO_LINHA, int POSICAO_COLUNA) {
+        if(POSICAO_LINHA<0||POSICAO_COLUNA<0||POSICAO_LINHA>=this.NUM_LINHAS||POSICAO_COLUNA>=this.NUM_COLUNAS){
+            return false;
+        }
         sala[POSICAO_LINHA][POSICAO_COLUNA]=1;
+        return true;
+    }
+
+    public boolean posicaoValida(int POSICAO_LINHA, int POSICAO_COLUNA) {
+        if(POSICAO_LINHA<0||POSICAO_COLUNA<0||POSICAO_LINHA>=this.NUM_LINHAS||POSICAO_COLUNA>=this.NUM_COLUNAS){
+            return false;
+        }
+        return true;
+    }
+
+    public boolean isPosicaoLivre(int POSICAO_LINHA, int POSICAO_COLUNA) throws Exception{
+        if(sala[POSICAO_LINHA][POSICAO_COLUNA]!=0) return false;
         return true;
     }
 }
