@@ -32,8 +32,8 @@ public class Sala {
 
     public boolean isVazia() {
         for(int i=0;i<this.NUM_LINHAS;i++){
-            for(int j=0;i<this.NUM_COLUNAS;j++){
-                if(sala[i][j]!=0) return false;
+            for(int j=0;j<this.NUM_COLUNAS;j++){
+                if(this.sala[i][j]!=LIVRE) return false;
             }
         }
         return true;
@@ -43,7 +43,7 @@ public class Sala {
         if(POSICAO_LINHA<0||POSICAO_COLUNA<0||POSICAO_LINHA>=this.NUM_LINHAS||POSICAO_COLUNA>=this.NUM_COLUNAS){
             return false;
         }
-        sala[POSICAO_LINHA][POSICAO_COLUNA]=1;
+        sala[POSICAO_LINHA][POSICAO_COLUNA]=OCUPADO;
         return true;
     }
 
@@ -56,13 +56,22 @@ public class Sala {
 
     public boolean isPosicaoLivre(int POSICAO_LINHA, int POSICAO_COLUNA) throws Exception{
         if(posicaoValida(POSICAO_LINHA, POSICAO_COLUNA)==false) throw new Exception("Posicao inexistente.");
-        if(sala[POSICAO_LINHA][POSICAO_COLUNA]!=0) return false;
+        if(sala[POSICAO_LINHA][POSICAO_COLUNA]!=LIVRE) return false;
         return true;
     }
 
     boolean setPosicao(int POSICAO_LINHA, int POSICAO_COLUNA, int OCUPADO) {
         if(posicaoValida(POSICAO_LINHA, POSICAO_COLUNA)==false) return false;
         sala[POSICAO_LINHA][POSICAO_COLUNA]=OCUPADO;
+        return true;
+    }
+    
+    public boolean equals(Sala outraSala){
+        for(int i=0;i<this.NUM_LINHAS;i++){
+            for(int j=0;j<this.NUM_COLUNAS;j++){
+                if(this.sala[i][j]!=outraSala.sala[i][j]) return false;
+            }
+        }
         return true;
     }
 }
