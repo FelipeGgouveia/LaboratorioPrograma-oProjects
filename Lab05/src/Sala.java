@@ -54,7 +54,8 @@ public class Sala {
         return true;
     }
 
-    public boolean isPosicaoLivre(int POSICAO_LINHA, int POSICAO_COLUNA){
+    public boolean isPosicaoLivre(int POSICAO_LINHA, int POSICAO_COLUNA) throws Exception{
+        if(posicaoValida(POSICAO_LINHA, POSICAO_COLUNA)==false) throw new Exception("Posicao inexistente.");
         if(sala[POSICAO_LINHA][POSICAO_COLUNA]!=0) return false;
         return true;
     }
