@@ -1,5 +1,6 @@
 
 public class Sala {
+    static final int OCUPADO=1, LIVRE=0;
     private int NUM_LINHAS;
     private int NUM_COLUNAS;
     private int sala[][];
@@ -7,7 +8,7 @@ public class Sala {
     private void zerarSala(){
         for(int i=0;i<this.NUM_LINHAS;i++){
             for(int j=0;i<this.NUM_COLUNAS;j++){
-                sala[i][j]=0;
+                sala[i][j]=LIVRE;
             }
         }
     }
@@ -53,8 +54,14 @@ public class Sala {
         return true;
     }
 
-    public boolean isPosicaoLivre(int POSICAO_LINHA, int POSICAO_COLUNA) throws Exception{
+    public boolean isPosicaoLivre(int POSICAO_LINHA, int POSICAO_COLUNA){
         if(sala[POSICAO_LINHA][POSICAO_COLUNA]!=0) return false;
+        return true;
+    }
+
+    boolean setPosicao(int POSICAO_LINHA, int POSICAO_COLUNA, int OCUPADO) {
+        if(posicaoValida(POSICAO_LINHA, POSICAO_COLUNA)==false) return false;
+        sala[POSICAO_LINHA][POSICAO_COLUNA]=OCUPADO;
         return true;
     }
 }
