@@ -31,7 +31,7 @@ public class Robo {
      * @throws Exception Retorna uma excecao se os parametros estiverem abaixo do desejado ou se nao existir uma sala
      */
     public Robo(Sala sala, int energia) throws Exception{
-        if(energia<=0) throw new Exception("O Robo nao pode ter ser inicializado com energia negativa ou nula..");
+        if(energia<=0) throw new Exception("O Robo nao pode ser inicializado com energia negativa ou nula..");
         if(sala==null) throw new Exception("Deve ser criada uma sala antes de criar um Robo..");
         this.sala = sala;
         if(!setPosicaoInicial())throw new Exception("Nao ha lugar vago para um Robo na sala..");
