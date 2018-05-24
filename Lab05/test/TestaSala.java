@@ -1,3 +1,7 @@
+/*Aluno 1: Felipe da Silva Gouveia*/
+/*Aluno 2: Jardesson Elliudo Lazaro da Costa*/
+/*Aluno 3: Matheus de Moura Torres */
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

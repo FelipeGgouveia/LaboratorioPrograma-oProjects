@@ -1,3 +1,6 @@
+/*Aluno 1: Felipe da Silva Gouveia*/
+/*Aluno 2: Jardesson Elliudo Lazaro da Costa*/
+/*Aluno 3: Matheus de Moura Torres */
 
 public class Sala{
     static final int OCUPADO=1, LIVRE=0;
@@ -53,7 +56,7 @@ public class Sala{
 
     public boolean isPosicaoLivre(int POSICAO_LINHA, int POSICAO_COLUNA) throws Exception{
         if(posicaoValida(POSICAO_LINHA, POSICAO_COLUNA)==false) throw new Exception("Posicao inexistente.");
-        return sala[POSICAO_LINHA][POSICAO_COLUNA] == LIVRE;
+        return (sala[POSICAO_LINHA][POSICAO_COLUNA] == LIVRE);
     }
 
     boolean setPosicao(int POSICAO_LINHA, int POSICAO_COLUNA, int opcao) {
