@@ -50,9 +50,9 @@ public class CD {
     public void setTrilhaPrincipal(String trilhaPrincipal) throws Exception {
         for(int i=0;i<album.size();i++){
             String faixa = album.get(i);
-            if(faixa.equals(this.trilhaPrincipal)) {
+            if(faixa.equals(trilhaPrincipal)) {
                 this.trilhaPrincipal = trilhaPrincipal;
-                break;
+                return;
             }
         }
         throw new Exception("Faixa nao consta no album");
@@ -78,7 +78,7 @@ public class CD {
     }
     
     public boolean equals(CD cd){
-        if(this.ARTISTA.equals(cd.ARTISTA)&&this.TITULO.equals(cd.TITULO)) return true;
+        if(this.TITULO.equals(cd.TITULO)&&this.ARTISTA.equals(cd.ARTISTA)) return true;
         return false;
     }
     
