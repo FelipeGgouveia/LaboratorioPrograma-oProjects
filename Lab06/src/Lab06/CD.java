@@ -17,6 +17,7 @@ public class CD {
     
     public CD(String TITULO, String ARTISTA, int M) throws Exception{
         if(TITULO==null||ARTISTA==null) throw new Exception("Título e/ou artista não podem ser vazios.");
+        if(M<1)throw new Exception("A quantidade de musicas do album nao pode ser negativa ou nula.Um album deve conter ao menos uma faixa de musica.");
         album = new ArrayList<>();
         this.TITULO = TITULO;
         this.ARTISTA = ARTISTA;
@@ -47,20 +48,20 @@ public class CD {
         return M;
     }
     
-    public void setTrilhaPrincipal(String trilhaPrincipal) throws Exception {
+    public boolean setTrilhaPrincipal(String trilhaPrincipal){
         for(int i=0;i<album.size();i++){
             String faixa = album.get(i);
             if(faixa.equals(trilhaPrincipal)) {
                 this.trilhaPrincipal = trilhaPrincipal;
-                return;
+                return true;
             }
         }
-        throw new Exception("Faixa nao consta no album");
+        return false;
     }
 
     public String getFaixa(int numFaixa){
-        if(numFaixa<=0||numFaixa>this.M) return null;
-        return album.get(numFaixa);
+        if(numFaixa<=0||numFaixa>this.slotAlbum) return null;
+        return album.get(numFaixa-1);
     }
     
     public boolean cadastroFaixa(String faixa){
