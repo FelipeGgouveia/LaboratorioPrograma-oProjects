@@ -5,7 +5,6 @@
 package Lab06;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Armazena informacoes sobre um CD de musicas
@@ -16,7 +15,7 @@ public class CD {
     private final String TITULO;
     private String trilhaPrincipal;
     private final int M;
-    private List<String> album;
+    private ArrayList<String> album;
     private int slotAlbum=0;
     
     /**
@@ -123,7 +122,7 @@ public class CD {
     
     @Override
     public String toString(){
-        return "ARTISTA: "+this.ARTISTA+"\nTITULO: "+this.TITULO+"\nTRILHA PRINCIPAL: "+this.trilhaPrincipal+"\n";
+        return "ARTISTA: "+this.ARTISTA+"  TITULO: "+this.TITULO+"\n";
     }
     
     /**
