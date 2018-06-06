@@ -7,13 +7,24 @@ package Lab06;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+/**
+ * Armazena um conjunto de CDs em uma lista
+ */
 public class MinhaCDteca {
     ArrayList<CD> cdTeca = new ArrayList<CD>();;
     
+    /**
+     * Adiciona um CD a lista
+     * @param cd O objeto a ser adicionado
+     */
     public void adicionaCD(CD cd){
         this.cdTeca.add(cd);
     }
     
+    /**
+     * Adiciona uma colecao de CDs na lista
+     * @param colecaoCD A colecao a ser armazenada
+     */
     public void adicionaCDS(ArrayList<CD> colecaoCD){
         Iterator<CD> it = colecaoCD.iterator();
         while(it.hasNext()){
@@ -21,6 +32,11 @@ public class MinhaCDteca {
         }
     }
     
+    /**
+     * Remove um CD da lista
+     * @param titulo Do CD
+     * @return O CD removido ou null se o CD nao for encontrado
+     */
     public CD removeCD(String titulo){
         for(int i=0;i<cdTeca.size();i++){
             CD cd = cdTeca.get(i);
@@ -32,6 +48,10 @@ public class MinhaCDteca {
         return null;
     }
     
+    /**
+     * Remove um conjunto de CDs da lista
+     * @return Se ao menos um CD da lista foi removido
+     */
     public boolean removeCDs(){
         boolean menos1 = false;
         for(int i=0;i<cdTeca.size();i++){
@@ -41,6 +61,11 @@ public class MinhaCDteca {
         return menos1;
     }
     
+    /**
+     * Procura um CD na lista
+     * @param titulo Do CD
+     * @return A posicao da lista ou null se o CD nao for encontrado
+     */
     public String pesquisaCD(String titulo){
         for(int i=0;i<cdTeca.size();i++){
             CD cd = cdTeca.get(i);
@@ -51,6 +76,10 @@ public class MinhaCDteca {
         return null;
     }
     
+    /**
+     * Informa o numero de CDs da lista
+     * @return O numero de CDs
+     */
     public int numeroDeCDs(){
         return cdTeca.size();
     }
@@ -64,10 +93,6 @@ public class MinhaCDteca {
             informacoesCD += cd.toString();
         }
         return informacoesCD;
-    }
-    
-    public boolean equals(ArrayList<CD> lista2){
-        
     }
         
 }

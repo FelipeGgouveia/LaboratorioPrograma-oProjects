@@ -8,7 +8,6 @@ import java.util.ArrayList;
 
 /**
  * Armazena informacoes sobre um CD de musicas
- * @author kobby
  */
 public class CD {
     private final String ARTISTA;
