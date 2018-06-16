@@ -5,12 +5,18 @@
 package P1;
 
 public class Taxista extends Rodoviario{
-    private int passageirosAno;
-    private final double TRIBUTO_PASSAGEIRO = 0.5;
-    
-    public double calcularTributo(){
-        setTributo(passageirosAno*TRIBUTO_PASSAGEIRO);
-        return getTributo();
-    }
-    
+	public Taxista(String nome, boolean casa, boolean carro, double valorCasa, double valorCarro) {
+		super(nome, casa, carro, valorCasa, valorCarro);
+	}
+
+	private int passageiros;
+	
+	public int getPassageiros() {
+		return passageiros;
+	}
+	
+	public void setPassageiros(int passageiros) {
+		this.passageiros = passageiros;
+	}
+	
 }

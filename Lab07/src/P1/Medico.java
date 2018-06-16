@@ -5,18 +5,26 @@
 package P1;
 
 public class Medico extends Contribuinte{
-    private int numeroPacientesAno;
-    private final double TRIBUTO_PACIENTE = 10.0;
-    private double despesasCongressos;
-    
-    public double calcularTributo(){
-        setTributo(numeroPacientesAno*TRIBUTO_PACIENTE);
-        return getTributo();
-    }
-    
-    public double calcularDesconto(){
-        setDesconto(despesasCongressos);
-        return getDesconto();
-    }
-    
+	public Medico(String nome, boolean casa, boolean carro, double valorCasa, double valorCarro) {
+		super(nome, casa, carro, valorCasa, valorCarro);
+		// TODO Auto-generated constructor stub
+	}
+	private int pacientes;
+	private double despesas;
+	
+	public int getPacientes() {
+		return pacientes;
+	}
+	
+	public void setPacientes(int pacientes) {
+		this.pacientes = pacientes;
+	}
+	
+	public double getDespesas() {
+		return despesas;
+	}
+	
+	public void setDespesas(double despesas) {
+		this.despesas = despesas;
+	}
 }

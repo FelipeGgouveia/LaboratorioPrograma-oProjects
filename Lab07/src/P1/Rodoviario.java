@@ -5,11 +5,17 @@
 package P1;
 
 public class Rodoviario extends Contribuinte{
-    private double quilometrosPercorridosAno;
-    private final double DESCONTO_RODOVIARIO = 0.01;
-    
-    public double calcularDesconto(){
-        setDesconto(quilometrosPercorridosAno*DESCONTO_RODOVIARIO);
-        return getDesconto();
-    }
+	public Rodoviario(String nome, boolean casa, boolean carro, double valorCasa, double valorCarro) {
+		super(nome, casa, carro, valorCasa, valorCarro);
+	}
+
+	private float quilometros;
+	
+	public float getQuilometros() {
+		return quilometros;
+	}
+	
+	public void setQuilometros(float quilometros) {
+		this.quilometros = quilometros;
+	}
 }

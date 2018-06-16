@@ -5,12 +5,18 @@
 package P1;
 
 public class Caminhoneiro extends Rodoviario{
-    private double toneladasAno;
-    
-    public double calcularTributo(){
-        if(toneladasAno>10) setTributo(500 + toneladasAno+100);
-        else setTributo(500);
-        return getTributo();
-    }
-    
+	public Caminhoneiro(String nome, boolean casa, boolean carro, double valorCasa, double valorCarro) {
+		super(nome, casa, carro, valorCasa, valorCarro);
+	}
+
+	private float toneladas;
+	
+	public float getToneladas() {
+		return toneladas;
+	}
+	
+	public void setToneladas(float toneladas) {
+		this.toneladas = toneladas;
+	}
+	
 }
